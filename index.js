@@ -1,5 +1,5 @@
 const app = require('express')();
-
+const PORT = 1510;
 //This is used for every layer of middleware that wants to be created
 //All incoming request are are executing this middleware first
 //To use the middleware it can be used like this and it will handle all the incoming request,
@@ -42,4 +42,4 @@ function printMessage(req, res, next) {
   }
 }
 //listen to a specific port
-app.listen(1510);
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
